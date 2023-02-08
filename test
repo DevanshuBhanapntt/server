@@ -4,3 +4,4 @@ st2 run ntt_itsm.servicenow_create_change_test company='ARCOSA' type='Normal' cm
 
 
 https://nttdsuat.service-now.com/api/now/table/change_request?sysparm_query=active=true%5Estate=2%5Ecompany.sys_id=5d89b80fdb9bb7005e23ef92ca96197d%5Epriority=3%5EORpriority=4%5Eend_dateRELATIVELT@hour@ahead@24%5Estart_dateRELATIVEGT@hour@ago@24%5EdescriptionLIKEAutomation%20Control%20Section%5EdescriptionLIKEAutoreboot%5Eshort_descriptionLIKE%5BTR%20-%20Automation%5D%20Patching&sysparm_fields=number,assignment_group,company,cmdb_ci,description,short_description,sys_id,priority,start_date,%20end_date,%20state
+15c1a3651bd381141eeaca292a4bcb45
