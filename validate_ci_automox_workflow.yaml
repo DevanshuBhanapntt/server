@@ -1,0 +1,305 @@
+---
+version: 1.0
+description: Validate Server in Automox console from the Request
+input:
+  - assign_group_name
+  - location_name
+  - request_number
+  - request_item_number
+  - company_name
+  - task_id
+  - task_sys_id
+  - customer_abbr
+  - ssh_password_key
+  - ssh_username_key
+  - ssh_tmp_dir_key
+  - winrm_password_key
+  - winrm_port_key
+  - winrm_username_key
+  - winrm_ssl_key
+  - winrm_verify_ssl_key
+ 
+vars:
+  - end_timestamp: ""
+  - error_message: ""
+  - error_output: ""
+  - insert_message: ""
+  - output_message: ""
+  - run_error: false
+  - run_error_config: false
+  - run_error_ping: false
+  - run_error_cmd_ping: false
+  - run_error_uptime: false
+  - ping_result: ""
+  - recheck_total: 0
+  - start_timestamp: ""
+  - ping_count: "5"
+  - recheck_limit: ""
+  - rerun_action: null
+  - sleep_interval: ""
+  - ssh_password: ""
+  - ssh_username: ""
+  - ssh_password_key: ""
+  - ssh_username_key: ""
+  - ssh_tmp_dir_key: ""
+  - winrm_password: ""
+  - winrm_port: ""
+  - winrm_scheme: ""
+  - winrm_username: ""
+  - winrm_verify_ssl: ""
+  - uptime_output: ""
+  - uptime_threshold: ""
+  - os_type: "windows"
+  - cmdb_ci: ""
+  - cmdb_ci_id: ""
+  - automox_result: ""
+  - automox_response: ""
+  - org_id_windows: "10491"
+  - org_id_nonwindows: "9533"
+  - console_name: ""
+  - diff_hour: ""
+  - counter: ""
+  
+output:
+  - output_message: "{{ ctx().output_message }}"
+  - automox_result: "{{ ctx().automox_result }}"
+tasks:
+  config_vars_get:
+    action: ntt_monitoring.config_vars_get
+    input:
+      customer_abbr: "{{ ctx().customer_abbr }}"
+      workflow_overrides:
+        ping_count: "{{ ctx().ping_count }}"
+        recheck_limit: "{{ ctx().recheck_limit }}"
+        sleep_interval: "{{ ctx().sleep_interval }}"
+        ssh_password: "{{ ctx().ssh_password }}"
+        ssh_username: "{{ ctx().ssh_username }}"
+        uptime_threshold: "{{ ctx().uptime_threshold }}"
+        winrm_password: "{{ ctx().winrm_password }}"
+        winrm_port: "{{ ctx().winrm_port }}"
+        winrm_scheme: "{{ ctx().winrm_scheme }}"
+        winrm_username: "{{ ctx().winrm_username }}"
+        winrm_verify_ssl: "{{ ctx().winrm_verify_ssl }}"
+        bolt_ssh_password_key: "{{ ctx().ssh_password_key }}"
+        bolt_ssh_username_key: "{{ ctx().ssh_username_key }}"
+        bolt_ssh_tmp_dir_key: "{{ ctx().ssh_tmp_dir_key }}"
+        bolt_winrm_password_key: "{{ ctx().winrm_password_key }}"
+        bolt_winrm_port_key: "{{ ctx().winrm_port_key }}"
+        bolt_winrm_username_key: "{{ ctx().winrm_username_key }}"
+        bolt_winrm_ssl_key: "{{ ctx().winrm_ssl_key }}"
+        bolt_winrm_verify_ssl_key: "{{ ctx().winrm_verify_ssl_key }}"
+    next:
+      - when: "{{ succeeded }}"
+        publish:
+          -   ssh_password: "{{ result().result.connections.ssh_password if 'connections' in result().result and 'ssh_password' in result().result.connections else '' }}"
+          - ssh_username: "{{ result().result.connections.ssh_username if 'connections' in result().result and 'ssh_username' in result().result.connections else '' }}"
+          - winrm_password: "{{ result().result.connections.winrm_password if 'connections' in result().result and 'winrm_password' in result().result.connections else '' }}"
+          - winrm_port: "{{ result().result.connections.winrm_port if 'connections' in result().result and 'winrm_port' in result().result.connections else '' }}"
+          - winrm_scheme: "{{ result().result.connections.winrm_scheme if 'connections' in result().result and 'winrm_scheme' in result().result.connections else '' }}"
+          - winrm_username: "{{ result().result.connections.winrm_username if 'connections' in result().result and 'winrm_username' in result().result.connections else '' }}"
+          - winrm_verify_ssl: "{{ result().result.connections.winrm_verify_ssl if 'connections' in result().result and 'winrm_verify_ssl' in result().result.connections else '' }}"
+          - ssh_password_key: "{{ result().result.connections.bolt_ssh_password_key if 'connections' in result().result and 'bolt_ssh_password_key' in result().result.connections else '' }}"
+          - ssh_username_key: "{{ result().result.connections.bolt_ssh_username_key if 'connections' in result().result and 'bolt_ssh_username_key' in result().result.connections else '' }}"
+          - ssh_tmp_dir_key: "{{ result().result.connections.bolt_ssh_tmp_dir_key if 'connections' in result().result and 'bolt_ssh_tmp_dir_key' in result().result.connections else '' }}"
+          - winrm_password_key: "{{ result().result.connections.bolt_winrm_password_key if 'connections' in result().result and 'bolt_winrm_password_key' in result().result.connections else '' }}"
+          - winrm_port_key: "{{ result().result.connections.bolt_winrm_port_key if 'connections' in result().result and 'bolt_winrm_port_key' in result().result.connections else '' }}"
+          - winrm_username_key: "{{ result().result.connections.bolt_winrm_username_key if 'connections' in result().result and 'bolt_winrm_username_key' in result().result.connections else '' }}"
+          - winrm_ssl_key: "{{ result().result.connections.bolt_winrm_ssl_key if 'connections' in result().result and 'bolt_winrm_ssl_key' in result().result.connections else '' }}"
+          - winrm_verify_ssl_key: "{{ result().result.connections.bolt_winrm_verify_ssl_key if 'connections' in result().result and 'bolt_winrm_verify_ssl_key' in result().result.connections else '' }}"
+          - uptime_threshold: "{{ result().result.threshold_uptime_low | int if 'threshold_uptime_low' in result().result else '' }}"
+          - sleep_interval: "{{ result().result.sleep_interval | int if 'sleep_interval' in result().result else '' }}"
+          - recheck_limit: "{{ result().result.recheck_limit | int if 'recheck_limit' in result().result else '' }}"
+          - ping_count: "{{ result().result.ping_count | int if 'ping_count' in result().result else '' }}"
+          - start_timestamp: "{{ task('config_vars_get').start_timestamp }}" 
+        do:
+          - itsm_begin
+      - when: "{{ failed() }}"
+        publish:
+          - error_message: "Could not get connection info for {{ ctx().customer_abbr }} or default please check the config file and try again"
+          - run_error_config: true
+          
+  itsm_begin:
+    action: ntt_itsm.itsm_task_update
+    input:
+      work_in_progress: true
+      task_sys_id: "{{ ctx().task_sys_id }}"
+      notes: "Automation has started processing this Task"
+    next: 
+      - when: "{{ succeeded() }}"
+        publish:
+          - output_message: "Moved the task to Work in progress"
+        do:
+          - get_task_details
+      - when: "{{ failed() }}"
+        publish:
+          - error_message: "Unable to update the Request task {{ ctx().task_id }} "
+          - run_error: true
+        do:
+          - noop
+          
+  get_task_details:
+    action: ntt_itsm.itsm_task_getentries
+    input:
+      task_id: "{{ ctx().task_id }}"
+    next: 
+      - when: "{{ succeeded()}}"
+        publish:
+          - plattform: "{{ result().result[0].plattform }}"
+          - assigned_group: "{{ result().result[0].assigned_group }}"
+          - short_description: "{{ result().result[0].short_description }}"
+          - state: "{{ result().result[0].state }}"
+          - work_notes_list: "{{ result().result[0].work_notes_list }}"          
+          do: noop
+      - when: "{{ ctx().state ==1 }}"
+          do : get_task_variable_details
+      - when: "{{ ctx().state ==5 }}"
+          do : get_worknote_hour_details         
+      - when: "{{ failed() }}"
+        publish:
+          - error_message: "Unable to fetch the ITSM task details {{ ctx().task_id }}!"
+          - run_error: true
+        do:
+          - noop
+          
+  get_worknote_hour_details:
+    action: get_worknote_hour_details.py
+    input: 
+      work_notes_list: {{ ctx().work_notes_list }}
+      state: {{ ctx().state }}      
+    next: 
+      - when: "{{ succeeded()}]"
+        publish:
+          - diff_hour: "{{ result().result[0].diff_hour }}"
+          - counter: "{{ result().result[0].counter }}"
+      - when: "{{ ctx().diff_hour > 3 and ctx().diff_hour < 24 and ctx().counter > 0 and ctx().counter <= 8 }}"   
+          do: get_task_variable_details 
+          
+  get_task_variable_details:
+    action: ntt_itsm.itsm_task_variables_getentries
+    input:
+      task_id: "{{ ctx().task_id }}"
+    next: 
+      - when: "{{ succeeded() and {{ result().result['short_description'] =='Validate or Add server in Automox Console'"
+        publish:
+          - task_variables: "{{ result().result }}"
+          - cmdb_ci: "{{ result().result['Server Name Assigned']
+          }}"
+          - match_condition: "name={{ ctx().cmdb_ci }}"
+        do:
+          - get_ci_details
+      - when: "{{ succeeded() and {{ result().result['short_description'] in 'Validate Automox'"
+        publish:
+          - task_variables: "{{ result().result }}"
+          - cmdb_ci: "{{ result().result['Server Name']
+          }}"
+          - match_condition: "name={{ ctx().cmdb_ci }}"
+        do:
+          - get_ci_details                   
+      - when: "{{ failed() }}"
+        publish:
+          - error_message: "Unable to fetch the ITSM task details {{ ctx().task_id }}!"
+          - run_error: true
+        do:
+          - noop
+          
+  get_ci_details:
+    action: ntt_itsm.itsm_table_getentries
+    input:
+      schema_name: "cmdb_ci"
+      match_condition: "{{ ctx().match_condition }}"
+    next:
+     - when: "{{ succeeded() }}"
+       publish:
+         - cmdb_ci: "{{ result().result[0].name }}"
+     - when: "{{ ctx().plattform=='Windows' or ctx().plattform=='Wintel' }}"
+       publish:
+         - org_id: "{{ ctx().org_id_windows }}"
+       do:
+         - validate_ci_automox
+     - when: "{{ ctx().plattform=='Linux' }}"
+       publish:
+         - org_id: "{{ ctx().org_id_nonwindows }}"
+       do:
+         - validate_ci_automox
+     - when: "{{ failed }}"
+       do:
+         - noop
+         
+  validate_ci_automox:
+    action: ntt_monitoring.bolt_plan
+    input:
+      server_fqdn: "{{ ctx().cmdb_ci }}"      
+      username: "unix.automation.mailbox@nttdata.com"
+      password: "Os7tAR1r5zB7pLLrsEP5"
+      page: "0"
+      count: "500"
+      plan: "ntt_monitoring::validate_ci_automox"
+      params:
+        org_id: "{{ ctx().org_id }}"
+        api_key: "4cccdd61-b639-472e-acb2-bfa72b76a818"
+      st2kv_config:
+        ssh.password: "{{ ctx().ssh_password_key }}"
+        ssh.user: "{{ ctx().ssh_username_key }}"
+        ssh.tmpdir: "{{ ctx().ssh_tmp_dir_key }}"
+        winrm.password: "{{ ctx().winrm_password_key }}"
+        winrm.user: "{{ ctx().winrm_username_key }}"
+        winrm.port: "{{ ctx().winrm_port_key }}"
+        winrm.ssl: "{{ ctx().winrm_ssl_key }}"
+        winrm.ssl-verify: "{{ ctx().winrm_verify_ssl_key }}"
+    next:
+      - when: "{{ succeeded() }}"
+        publish:
+         - automox_respose: "{{ result().output.run.result.output }}"        
+         - automox_status_code: "{{ ctx().automox_result.StatusCode }}" 
+      - when: "{{ ctx().automox_status_code == 200 and ctx().cmdb_ci in ctx().automox_response }}"
+      publish:
+         - automox_result: "Server {{ ctx().cmdb_ci }} is present in Automox Console "
+         - output_message: "{{ ctx().automox_result }}"
+        do:
+         - task_update_close
+      - when: "{{ failed() }}"
+        publish:
+          - output_message: "Automation has checked and unable to find CI on the System. Suspending this task for 3 hour"
+          do:
+          - task_update_suspend
+          - run_error: true 
+          - AM_Status: "fail"
+          
+  task_update_suspend:
+    action: ntt_itsm.itsm_task_update
+    input:      
+      task_sys_id: "{{ ctx().task_sys_id }}"
+      pending: true
+      pending_mins: "10800"
+      notes: "Automation is suspending the task for 3 hours"
+    next:
+      - when: "{{ succeeded() }}"
+        publish:
+          - output_message: "Task moved to Suspend state"
+        do:
+          - noop
+      - when: "{{ failed() }}"
+        publish:
+          - error_message: "Unable to update the Request task {{ ctx().task_id }}"
+          - run_error: true
+        do:
+          - noop
+          
+  task_update_close:
+    action: ntt_itsm.itsm_task_update
+    input:
+      close: true
+      task_sys_id: "{{ ctx().task_sys_id }}"
+      notes: ""
+    next:
+      - when: "{{ succeeded() }}"
+        publish:
+          - output_message: "Task moved to completed state"
+        do:
+          - noop
+      - when: "{{ failed() }}"
+        publish:
+          - error_message: "Unable to update the Request task {{ ctx().task_id }}"
+          - run_error: true
+        do:
+          - noop
