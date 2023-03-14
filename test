@@ -28,3 +28,16 @@ TASK4083306
 b5b96dd4dbcde810f8861a8c13961960
 
 
+import requests
+import json 
+def validate_CMA(console_name,url,username,password):
+    print("b")
+    response = requests.get(url, auth=(username, password),verify=False)
+    print(response)        
+url= "https://10.4.192.226/api/v2/hosts/c0040l0056p.com"
+username= "cmaadmin"
+password= "puppetadm#123"
+console_name="CMA"
+if(console_name=="CMA"):
+    print("a")
+    response=validate_CMA(console_name,url,username,password)
