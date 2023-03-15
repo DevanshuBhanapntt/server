@@ -43,3 +43,128 @@ if(console_name=="CMA"):
     response=validate_CMA(console_name,url,username,password)
     
 C0040W0101P
+
+
+
+
+
+
+
+[root@c0040l0045c actions]# st2 run ntt_itsm.automox_patch_change_creation_v1_linux daysinfuture=0
+.......................................................................................................................................
+id: 64121900f113f2804b017b2e
+action.ref: ntt_itsm.automox_patch_change_creation_v1_linux
+context.user: st2admin
+parameters:
+  automox_apikey: 4cccdd61-b639-472e-acb2-bfa72b76a818
+  automox_password: Os7tAR1r5zB7pLLrsEP5
+  automox_username: unix.automation.mailbox@nttdata.com
+  daysinfuture: 0
+status: failed
+start_timestamp: Wed, 15 Mar 2023 19:14:08 UTC
+end_timestamp: Wed, 15 Mar 2023 19:18:40 UTC
+result:
+  exit_code: 1
+  result: None
+  stderr: "Traceback (most recent call last):
+  File "/opt/stackstorm/st2/lib/python3.8/site-packages/python_runner/python_action_wrapper.py", line 395, in <module>
+    obj.run()
+  File "/opt/stackstorm/st2/lib/python3.8/site-packages/python_runner/python_action_wrapper.py", line 214, in run
+    output = action.run(**self._parameters)
+  File "/opt/stackstorm/packs/ntt_itsm/actions/automox_patch_change_creation_v1_linux.py", line 378, in run
+    server = smtplib.SMTP(smtp_server, port)
+  File "/usr/lib64/python3.8/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/lib64/python3.8/smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/lib64/python3.8/smtplib.py", line 310, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/lib64/python3.8/socket.py", line 808, in create_connection
+    raise err
+  File "/usr/lib64/python3.8/socket.py", line 796, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+"
+  stdout: 'n0469l0026n 2023-03-17T05:00:00+0000
+    n0469l0097n 2023-03-17T05:00:00+0000
+    n0469l0013n 2023-03-17T05:00:00+0000
+    n0469l0027n 2023-03-17T05:00:00+0000
+    n0469l0068n 2023-03-16T05:00:00+0000
+    n0469l0046n 2023-03-17T05:00:00+0000
+    n0469l0040n 2023-03-17T05:30:00+0000
+    n0469l0118n 2023-03-16T05:00:00+0000
+    n0469l0025n 2023-03-17T05:00:00+0000
+    n0469l0113n 2023-03-16T05:00:00+0000
+    n0469l0036n 2023-03-16T05:00:00+0000
+    n0469l0045n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0051n 2023-03-17T05:00:00+0000
+    n0469l0028n 2023-03-17T05:00:00+0000
+    n0469l0037n 2023-03-16T05:00:00+0000
+    n0469l0014n 2023-03-17T05:00:00+0000
+    n0469l0024n 2023-03-17T05:00:00+0000
+    n0469l0102n 2023-03-17T05:00:00+0000
+    n0469l0020n 2023-03-17T05:00:00+0000
+    n0469l0112n 2023-03-16T05:00:00+0000
+    n0469l0041n 2023-03-17T05:00:00+0000
+    n0469l0066n 2023-03-16T05:00:00+0000
+    n0469l0023n 2023-03-17T05:00:00+0000
+    n0469l0069n 2023-03-16T05:00:00+0000
+    n0469l0031n 2023-03-16T05:00:00+0000
+    n0469l0029n 2023-03-17T05:00:00+0000
+    n0469l0032n 2023-03-16T05:00:00+0000
+    n0469l0022n 2023-03-17T05:00:00+0000
+    n0469l0054n 2023-03-17T05:00:00+0000
+    n0469l0098n 2023-03-17T05:00:00+0000
+    n0469l0082n 2023-03-17T05:00:00+0000
+    n0469l0052n 2023-03-17T05:00:00+0000
+    n0469l0111n 2023-03-16T05:00:00+0000
+    n0469l0016n 2023-03-17T05:00:00+0000
+    n0469l0053n 2023-03-17T05:00:00+0000
+    n0469l0067n 2023-03-16T05:00:00+0000
+    n0469l0042n 2023-03-17T05:00:00+0000
+    n0469l0035n 2023-03-16T05:00:00+0000
+    n0469l0109n 2023-03-16T05:00:00+0000
+    n0469l0018n 2023-03-17T05:00:00+0000
+    n0469l0076n 2023-03-16T05:00:00+0000
+    n0469l0116n 2023-03-17T05:00:00+0000
+    n0469l0017n 2023-03-17T05:00:00+0000
+    n0469l0101n 2023-03-17T05:00:00+0000
+    n0469l0021n 2023-03-17T05:00:00+0000
+    n0469l0299n 2023-03-17T05:00:00+0000
+    n0469l0298n 2023-03-16T05:00:00+0000
+    n0469l0283n 2023-03-16T05:00:00+0000
+    n0469l0257n 2023-03-16T05:00:00+0000
+    n0469l0256n 2023-03-16T05:00:00+0000
+    n0469l0246n 2023-03-17T05:00:00+0000
+    n0469l0132n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0131n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0096n 2023-03-17T05:00:00+0000
+    n0469l0083n 2023-03-17T05:00:00+0000
+    n0469l0077n.clarios.com 2023-03-16T05:00:00+0000
+    n0469l0074n 2023-03-16T05:00:00+0000
+    n0469l0075n 2023-03-16T05:00:00+0000
+    n0469l0073n 2023-03-16T05:00:00+0000
+    n0469l0072n 2023-03-16T05:00:00+0000
+    n0469l0071n 2023-03-16T05:00:00+0000
+    n0469l0070n 2023-03-16T05:00:00+0000
+    n0469l0061n 2023-03-16T05:00:00+0000
+    n0469l0059n 2023-03-16T05:00:00+0000
+    n0469l0060n 2023-03-16T05:00:00+0000
+    n0469l0057n 2023-03-16T05:00:00+0000
+    n0469l0058n 2023-03-16T05:00:00+0000
+    n0469l0039n 2023-03-17T05:00:00+0000
+    n0469l0038n 2023-03-17T05:00:00+0000
+    n0469l0033n 2023-03-17T05:00:00+0000
+    n0469l0019n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0015n 2023-03-17T05:00:00+0000
+    n0469l0011n 2023-03-17T05:00:00+0000
+    n0469l0010n 2023-03-17T05:00:00+0000
+    [76909, 146739, 146740]
+    =========== Group Name: Clarios_Linux_Prod_Servers and Id: 76909 ==============
+    [96577]
+    96577 Clarios_Linux_Prod
+    False
+    True False patch 22
+    one of the condition is not satisfied:  True False patch 22
+    '
+[root@c0040l0045c actions]#
