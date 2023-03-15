@@ -1,0 +1,50 @@
+---
+description: "Automox API change creation"
+enabled: true
+runner_type: "python-script"
+entry_point: automox_patch_change_creation_v1_linux.py
+name: automox_patch_change_creation_v1_linux
+pack: ntt_itsm
+parameters:
+    timeout:
+        type: integer
+        description: "Change the value if execution is above 2.5 hour. overwriting the default timeout of 600 seconds to 10000 seconds."
+        default: 10000
+    automox_username:
+        type: string
+        description: "username for automox login"
+        default: "{{ st2kv.system.automox_username }}"
+    automox_password:
+        type: string
+        description: "password for automox login"
+        default: "{{ st2kv.system.automox_password | decrypt_kv }}"
+    automox_apikey:
+        type: string
+        description: "api key for automox login"
+        default: "{{ st2kv.system.automox_apikey }}"
+    automox_orgid:
+        type: string
+        description: "org id for windows/linux"
+        default: "17238"
+    daysinfuture:
+        type: integer
+        description: "lead time for the changes creation"
+        default: 2
+    customername:
+        type: string
+        description: "Name of Customer/Account"
+        default: "HYG"
+    companyname:
+        type: string
+        description: "Name of Customer/Account in fullform"
+        default: "Hyster-Yale Group"
+    change_payload_email:
+        type: string
+        description: "email id of requester for change creation"
+        default: "DL_HYG_Wintel_RUN@nttdata.com"
+    receiver_email:
+        type: string
+        description: "email ids of notification receivers"
+        default: "naveenkrishna.meruva@nttdata.com,Sreedevi.AN@nttdata.com"
+
+
