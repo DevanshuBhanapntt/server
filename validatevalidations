@@ -1,0 +1,55 @@
+
+from lib.base_action import BaseAction
+
+class ValidateValidations(BaseAction):
+    def __init__(self, config):
+        """Creates a new Action given a StackStorm config object (kwargs works too)
+        :param config: StackStorm configuration object for the pack
+        :returns: a new Action
+        """
+        super(ValidateValidations, self).__init__(config)
+
+    def run(self, rdp_port_status, uptime_validation, Service_Status, Automox_Status, os_flag ):
+        failedworknotes = ""
+        #Port validation check
+        portcheck = rdp_port_status.find("MSTSC_CONNECTED")
+        if portcheck == -1:
+             portresult = "False"
+             failedworknotes = ", RDP Port is not connected"
+        else:
+             portresult = "True"
+        #print("portresult: {}".format(portresult))
+        #Uptime validation check
+        if "Server Not Rebooted" in uptime_validation:
+             uptimeresult = "False"
+             failedworknotes = failedworknotes + ", Server is not Rebooted within the Threshold "
+        else:
+             uptimeresult = "True"
+        #print("uptimeresult: {}".format(uptimeresult))
+        # Service Validation
+        if Service_Status.find("Number of Services:") == -1:
+             #print("No of services not found")
+             serviceresult = "True"
+        else:
+             ServiceStatusSplit = Service_Status.split(": ")
+             no_of_services = ServiceStatusSplit[1]
+             #print("no of services not running: {}".format(no_of_services))
+             if no_of_services == "0":
+                 serviceresult = "True"
+             else:
+                 serviceresult = "False"
+                 failedworknotes = failedworknotes + ", Services in auto start mode are not runinng"
+        #print("serviceresult: {}".format(serviceresult))
+        # Automox Validation
+        if Automox_Status == "success":
+            automoxresult = "True"
+        else:
+            automoxresult = "False"
+
+        print(failedworknotes)
+        #Final result part
+        if portresult == "True" and uptimeresult == "True" and serviceresult == "True" and automoxresult == "True":
+             result = "True"
+        else:
+             result = "False"
+        return result
