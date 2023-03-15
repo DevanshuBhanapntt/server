@@ -1,0 +1,551 @@
+[root@c0040l0045c actions]# st2 run ntt_itsm.automox_patch_change_creation_v1_linux daysinfuture=0 timeout=600
+............................................................................................................................................................................................................................................................................
+id: 6412339ef113f2804b017b43
+action.ref: ntt_itsm.automox_patch_change_creation_v1_linux
+context.user: st2admin
+parameters:
+  automox_apikey: 4cccdd61-b639-472e-acb2-bfa72b76a818
+  automox_password: Os7tAR1r5zB7pLLrsEP5
+  automox_username: unix.automation.mailbox@nttdata.com
+  daysinfuture: 0
+  timeout: 600
+status: succeeded
+start_timestamp: Wed, 15 Mar 2023 21:07:42 UTC
+end_timestamp: Wed, 15 Mar 2023 21:16:45 UTC
+result:
+  exit_code: 0
+  result:
+    servers_data: []
+  stderr: ''
+  stdout: 'n0469l0026n 2023-03-17T05:00:00+0000
+    n0469l0097n 2023-03-17T05:00:00+0000
+    n0469l0013n 2023-03-17T05:00:00+0000
+    n0469l0027n 2023-03-17T05:00:00+0000
+    n0469l0068n 2023-03-16T05:00:00+0000
+    n0469l0046n 2023-03-17T05:00:00+0000
+    n0469l0040n 2023-03-17T05:30:00+0000
+    n0469l0118n 2023-03-16T05:00:00+0000
+    n0469l0025n 2023-03-17T05:00:00+0000
+    n0469l0113n 2023-03-16T05:00:00+0000
+    n0469l0036n 2023-03-16T05:00:00+0000
+    n0469l0045n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0051n 2023-03-17T05:00:00+0000
+    n0469l0028n 2023-03-17T05:00:00+0000
+    n0469l0037n 2023-03-16T05:00:00+0000
+    n0469l0014n 2023-03-17T05:00:00+0000
+    n0469l0024n 2023-03-17T05:00:00+0000
+    n0469l0102n 2023-03-17T05:00:00+0000
+    n0469l0020n 2023-03-17T05:00:00+0000
+    n0469l0112n 2023-03-16T05:00:00+0000
+    n0469l0041n 2023-03-17T05:00:00+0000
+    n0469l0066n 2023-03-16T05:00:00+0000
+    n0469l0023n 2023-03-17T05:00:00+0000
+    n0469l0069n 2023-03-16T05:00:00+0000
+    n0469l0031n 2023-03-16T05:00:00+0000
+    n0469l0029n 2023-03-17T05:00:00+0000
+    n0469l0032n 2023-03-16T05:00:00+0000
+    n0469l0022n 2023-03-17T05:00:00+0000
+    n0469l0054n 2023-03-17T05:00:00+0000
+    n0469l0098n 2023-03-17T05:00:00+0000
+    n0469l0082n 2023-03-17T05:00:00+0000
+    n0469l0052n 2023-03-17T05:00:00+0000
+    n0469l0111n 2023-03-16T05:00:00+0000
+    n0469l0016n 2023-03-17T05:00:00+0000
+    n0469l0053n 2023-03-17T05:00:00+0000
+    n0469l0067n 2023-03-16T05:00:00+0000
+    n0469l0042n 2023-03-17T05:00:00+0000
+    n0469l0035n 2023-03-16T05:00:00+0000
+    n0469l0109n 2023-03-16T05:00:00+0000
+    n0469l0018n 2023-03-17T05:00:00+0000
+    n0469l0076n 2023-03-16T05:00:00+0000
+    n0469l0116n 2023-03-17T05:00:00+0000
+    n0469l0017n 2023-03-17T05:00:00+0000
+    n0469l0101n 2023-03-17T05:00:00+0000
+    n0469l0021n 2023-03-17T05:00:00+0000
+    n0469l0299n 2023-03-17T05:00:00+0000
+    n0469l0298n 2023-03-16T05:00:00+0000
+    n0469l0283n 2023-03-16T05:00:00+0000
+    n0469l0257n 2023-03-16T05:00:00+0000
+    n0469l0256n 2023-03-16T05:00:00+0000
+    n0469l0246n 2023-03-17T05:00:00+0000
+    n0469l0132n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0131n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0096n 2023-03-17T05:00:00+0000
+    n0469l0083n 2023-03-17T05:00:00+0000
+    n0469l0077n.clarios.com 2023-03-16T05:00:00+0000
+    n0469l0074n 2023-03-16T05:00:00+0000
+    n0469l0075n 2023-03-16T05:00:00+0000
+    n0469l0073n 2023-03-16T05:00:00+0000
+    n0469l0072n 2023-03-16T05:00:00+0000
+    n0469l0071n 2023-03-16T05:00:00+0000
+    n0469l0070n 2023-03-16T05:00:00+0000
+    n0469l0061n 2023-03-16T05:00:00+0000
+    n0469l0059n 2023-03-16T05:00:00+0000
+    n0469l0060n 2023-03-16T05:00:00+0000
+    n0469l0057n 2023-03-16T05:00:00+0000
+    n0469l0058n 2023-03-16T05:00:00+0000
+    n0469l0039n 2023-03-17T05:00:00+0000
+    n0469l0038n 2023-03-17T05:00:00+0000
+    n0469l0033n 2023-03-17T05:00:00+0000
+    n0469l0019n.clarios.com 2023-03-17T05:00:00+0000
+    n0469l0015n 2023-03-17T05:00:00+0000
+    n0469l0011n 2023-03-17T05:00:00+0000
+    n0469l0010n 2023-03-17T05:00:00+0000
+    [76909, 146739, 146740]
+    =========== Group Name: Clarios_Linux_Prod_Servers and Id: 76909 ==============
+    [96577]
+    96577 Clarios_Linux_Prod
+    False
+    True False patch 22
+    Active Patching Policy ID :  96577 Policy Name :  Clarios_Linux_Prod
+    one of the condition is not satisfied:  True False patch 22
+    No changes created in this group:  Clarios_Linux_Prod_Servers
+    Patching group id :  76909 Notes- 76909  :   Name- 76909  :  Clarios_Linux_Prod_Servers
+    Changes created:  [] server not in cmdb:  [] groupcount:  1 policycount:  1
+    =========== Group Name: Group1-SAP-Non Prod and Id: 146739 ==============
+    [248902, 248909]
+    248902 Group1-SAP-Non Prod
+    False
+    True False patch 31
+    Active Patching Policy ID :  248902 Policy Name :  Group1-SAP-Non Prod
+    Working on Server  n0469l0068n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0068n
+    2023-03-16 05:00:00
+    time difference:  11:45:40.155140
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0068n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0118n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0118n
+    2023-03-16 05:00:00
+    time difference:  11:45:39.711002
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0118n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0113n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0113n
+    2023-03-16 05:00:00
+    time difference:  11:45:39.270143
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0113n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0036n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0036n
+    2023-03-16 05:00:00
+    time difference:  11:45:38.811111
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0036n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0037n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0037n
+    2023-03-16 05:00:00
+    time difference:  11:45:38.379758
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0037n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0112n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0112n
+    2023-03-16 05:00:00
+    time difference:  11:45:37.963348
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0112n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0066n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0066n
+    2023-03-16 05:00:00
+    time difference:  11:45:37.533307
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0066n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0069n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0069n
+    2023-03-16 05:00:00
+    time difference:  11:45:37.091906
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0069n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0031n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0031n
+    2023-03-16 05:00:00
+    time difference:  11:45:36.650821
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0031n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0032n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0032n
+    2023-03-16 05:00:00
+    time difference:  11:45:36.195340
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0032n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0111n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0111n
+    2023-03-16 05:00:00
+    time difference:  11:45:35.777934
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0111n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0067n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0067n
+    2023-03-16 05:00:00
+    time difference:  11:45:35.355356
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0067n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0035n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0035n
+    2023-03-16 05:00:00
+    time difference:  11:45:34.914049
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0035n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0109n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0109n
+    2023-03-16 05:00:00
+    time difference:  11:45:34.473335
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0109n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0076n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0076n
+    2023-03-16 05:00:00
+    time difference:  11:45:34.032473
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0076n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0298n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0298n
+    2023-03-16 05:00:00
+    time difference:  11:45:33.591433
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0298n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0283n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0283n
+    2023-03-16 05:00:00
+    time difference:  11:45:33.157996
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0283n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0257n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0257n
+    2023-03-16 05:00:00
+    time difference:  11:45:32.718129
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0257n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0256n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0256n
+    2023-03-16 05:00:00
+    time difference:  11:45:32.285945
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0256n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0077n.clarios.com
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0077n.clarios.com
+    2023-03-16 05:00:00
+    time difference:  11:45:31.835278
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0077n.clarios.com  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0074n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0074n
+    2023-03-16 05:00:00
+    time difference:  11:45:31.412976
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0074n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0075n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0075n
+    2023-03-16 05:00:00
+    time difference:  11:45:30.970024
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0075n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0073n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0073n
+    2023-03-16 05:00:00
+    time difference:  11:45:30.531327
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0073n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0072n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0072n
+    2023-03-16 05:00:00
+    time difference:  11:45:30.090029
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0072n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0071n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0071n
+    2023-03-16 05:00:00
+    time difference:  11:45:29.648159
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0071n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0070n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0070n
+    2023-03-16 05:00:00
+    time difference:  11:45:29.206057
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0070n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0061n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0061n
+    2023-03-16 05:00:00
+    time difference:  11:45:28.749308
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0061n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0059n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0059n
+    2023-03-16 05:00:00
+    time difference:  11:45:28.326295
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0059n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0060n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0060n
+    2023-03-16 05:00:00
+    time difference:  11:45:27.884663
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0060n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0057n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0057n
+    2023-03-16 05:00:00
+    time difference:  11:45:27.461785
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0057n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    Working on Server  n0469l0058n
+    Server Next Patch time is present:  2023-03-16T05:00:00+0000 n0469l0058n
+    2023-03-16 05:00:00
+    time difference:  11:45:27.029843
+    Next Patch window is 2023-03-16 09:00:00+00:00 which is 0 days away from today
+    checking the  n0469l0058n  and server status - it should be in opertaional status - in cmdb
+    {''https'': ''http://proxy.clarios.com:443''}
+    An error occurred while connecting to CMDB
+    one of the condition is not satisfied:  True False patch 31
+    248909 Group1-SAP Non SAP
+    Keyerror in policy :  248909 Group1-SAP Non SAP
+    ''auto_patch''
+    No changes created in this group:  Group1-SAP-Non Prod
+    Patching group id :  146739 Notes- 146739  :   Name- 146739  :  Group1-SAP-Non Prod
+    Changes created:  [] server not in cmdb:  [''(n0469l0068n) not in operational status for (Clarios)'', ''(n0469l0118n) not in operational status for (Clarios)'', ''(n0469l0113n) not in operational status for (Clarios)'', ''(n0469l0036n) not in operational status for (Clarios)'', ''(n0469l0037n) not in operational status for (Clarios)'', ''(n0469l0112n) not in operational status for (Clarios)'', ''(n0469l0066n) not in operational status for (Clarios)'', ''(n0469l0069n) not in operational status for (Clarios)'', ''(n0469l0031n) not in operational status for (Clarios)'', ''(n0469l0032n) not in operational status for (Clarios)'', ''(n0469l0111n) not in operational status for (Clarios)'', ''(n0469l0067n) not in operational status for (Clarios)'', ''(n0469l0035n) not in operational status for (Clarios)'', ''(n0469l0109n) not in operational status for (Clarios)'', ''(n0469l0076n) not in operational status for (Clarios)'', ''(n0469l0298n) not in operational status for (Clarios)'', ''(n0469l0283n) not in operational status for (Clarios)'', ''(n0469l0257n) not in operational status for (Clarios)'', ''(n0469l0256n) not in operational status for (Clarios)'', ''(n0469l0077n.clarios.com) not in operational status for (Clarios)'', ''(n0469l0074n) not in operational status for (Clarios)'', ''(n0469l0075n) not in operational status for (Clarios)'', ''(n0469l0073n) not in operational status for (Clarios)'', ''(n0469l0072n) not in operational status for (Clarios)'', ''(n0469l0071n) not in operational status for (Clarios)'', ''(n0469l0070n) not in operational status for (Clarios)'', ''(n0469l0061n) not in operational status for (Clarios)'', ''(n0469l0059n) not in operational status for (Clarios)'', ''(n0469l0060n) not in operational status for (Clarios)'', ''(n0469l0057n) not in operational status for (Clarios)'', ''(n0469l0058n) not in operational status for (Clarios)''] groupcount:  2 policycount:  1
+    =========== Group Name: Group2-SAP-Non Prod and Id: 146740 ==============
+    [248910, 248903]
+    248910 Group2-SAP Non Prod
+    Keyerror in policy :  248910 Group2-SAP Non Prod
+    ''auto_patch''
+    248903 Group2-SAP-Non Prod
+    False
+    True False patch 43
+    Active Patching Policy ID :  248903 Policy Name :  Group2-SAP-Non Prod
+    Working on Server  n0469l0026n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0026n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.007137
+    Working on Server  n0469l0097n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0097n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.007061
+    Working on Server  n0469l0013n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0013n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.006997
+    Working on Server  n0469l0027n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0027n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.006920
+    Working on Server  n0469l0046n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0046n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.006815
+    Working on Server  n0469l0040n
+    Server Next Patch time is present:  2023-03-17T05:30:00+0000 n0469l0040n
+    2023-03-17 05:30:00
+    time difference:  1 day, 12:13:16.006764
+    Working on Server  n0469l0025n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0025n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.006710
+    Working on Server  n0469l0045n.clarios.com
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0045n.clarios.com
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.001079
+    Working on Server  n0469l0051n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0051n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000949
+    Working on Server  n0469l0028n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0028n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000894
+    Working on Server  n0469l0014n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0014n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000841
+    Working on Server  n0469l0024n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0024n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000790
+    Working on Server  n0469l0102n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0102n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000709
+    Working on Server  n0469l0020n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0020n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000638
+    Working on Server  n0469l0041n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0041n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000527
+    Working on Server  n0469l0023n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0023n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000462
+    Working on Server  n0469l0029n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0029n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000407
+    Working on Server  n0469l0022n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0022n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000304
+    Working on Server  n0469l0054n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0054n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000195
+    Working on Server  n0469l0098n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0098n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000119
+    Working on Server  n0469l0082n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0082n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000067
+    Working on Server  n0469l0052n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0052n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:16.000016
+    Working on Server  n0469l0016n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0016n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999959
+    Working on Server  n0469l0053n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0053n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999905
+    Working on Server  n0469l0042n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0042n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999845
+    Working on Server  n0469l0018n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0018n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999758
+    Working on Server  n0469l0116n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0116n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999707
+    Working on Server  n0469l0017n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0017n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999658
+    Working on Server  n0469l0101n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0101n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999605
+    Working on Server  n0469l0021n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0021n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999557
+    Working on Server  n0469l0299n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0299n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999504
+    Working on Server  n0469l0246n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0246n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999368
+    Working on Server  n0469l0132n.clarios.com
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0132n.clarios.com
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999260
+    Working on Server  n0469l0131n.clarios.com
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0131n.clarios.com
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999195
+    Working on Server  n0469l0096n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0096n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999116
+    Working on Server  n0469l0083n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0083n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.999051
+    Working on Server  n0469l0039n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0039n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998935
+    Working on Server  n0469l0038n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0038n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998883
+    Working on Server  n0469l0033n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0033n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998813
+    Working on Server  n0469l0019n.clarios.com
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0019n.clarios.com
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998759
+    Working on Server  n0469l0015n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0015n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998703
+    Working on Server  n0469l0011n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0011n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998620
+    Working on Server  n0469l0010n
+    Server Next Patch time is present:  2023-03-17T05:00:00+0000 n0469l0010n
+    2023-03-17 05:00:00
+    time difference:  1 day, 11:43:15.998571
+    one of the condition is not satisfied:  True False patch 43
+    No changes created in this group:  Group2-SAP-Non Prod
+    Patching group id :  146740 Notes- 146740  :   Name- 146740  :  Group2-SAP-Non Prod
+    Changes created:  [] server not in cmdb:  [] groupcount:  3 policycount:  1
+    [''n0469l0068n'', ''n0469l0118n'', ''n0469l0113n'', ''n0469l0036n'', ''n0469l0037n'', ''n0469l0112n'', ''n0469l0066n'', ''n0469l0069n'', ''n0469l0031n'', ''n0469l0032n'', ''n0469l0111n'', ''n0469l0067n'', ''n0469l0035n'', ''n0469l0109n'', ''n0469l0076n'', ''n0469l0298n'', ''n0469l0283n'', ''n0469l0257n'', ''n0469l0256n'', ''n0469l0077n.clarios.com'', ''n0469l0074n'', ''n0469l0075n'', ''n0469l0073n'', ''n0469l0072n'', ''n0469l0071n'', ''n0469l0070n'', ''n0469l0061n'', ''n0469l0059n'', ''n0469l0060n'', ''n0469l0057n'', ''n0469l0058n'']
