@@ -168,3 +168,8 @@ TimeoutError: [Errno 110] Connection timed out
     one of the condition is not satisfied:  True False patch 22
     '
 [root@c0040l0045c actions]#
+
+
+
+https://10.75.0.37:3780/api/3/assets%22
+ token: "6367decc-0ac7-42d7-a071-fba9ee454987"
