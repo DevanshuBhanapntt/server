@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+
+#Stackstorm action Module
+from lib.base_action import BaseAction
+
+#API Request Module
+import requests
+
+#Json Module
+import json
+
+
+class validateci(BaseAction):
+    def __init__(self, config):
+        """Creates a new Action given a StackStorm config object (kwargs works too)
+        :param config: StackStorm configuration object for the pack
+        :returns: a new Action
+        """
+        super(validateci, self).__init__(config)
+
+    def run(self, automox_apikey, automox_username, automox_password, automox_orgid, ci_name):
+        apikey = automox_apikey
+        orgid = automox_orgid # needs to be changed as per Customer OrgID 17238 for HYG Windows | 17239 for HYG Linux
+        serverlist = []
+        servernames = []
+
+        #automox credentials
+        user = automox_username
+        pass1 = automox_password
+        proxy1 = { 'https': 'http://proxy.clarios.com:443' }
+
+        #get the server details and store in a variable
+        for pagecount in range(0,10):
+            #print("Getting the server list from page {}".format(pagecount))
+            automoxapiserver = "https://console.automox.com/api/servers?o=" + orgid + "&api_key=" + apikey + "&l=500" + "&p=" + str(pagecount)
+            serverlistraw = requests.get(automoxapiserver, auth=('user', 'pass1'),proxies=proxy1)
+            #print(serverlistraw.json())
+            serverlistresult = (serverlistraw.json())["results"]
+            servercount= len(serverlistresult)
+            serverlist = serverlist + serverlistresult
+            if servercount < 500:
+                break
+        for server in serverlist:
+            #print(server["name"])
+            if ci_name.lower() == server["name"].lower():
+                return False
+        return False
