@@ -7,9 +7,9 @@ import datetime
 from email.mime.application import MIMEApplication
 from os.path import basename
 
-company = "Moodys"
-company_abbreviation = "Moodys"
-server_ip = "10.124.128.161"
+company = "CLARIOS"
+company_abbreviation = "CLARIOS"
+server_ip = "10.75.9.167"
 msg_to = 'BAO_Offshore_team@nttdata.com'
 
 def health_check():
@@ -114,9 +114,9 @@ def health_check():
 
 def send_email(file_path):
     port = '25'
-    smtp_server = '155.16.123.161'
+    smtp_server = 'smtp.clarios.com'
     msg_subject = company_abbreviation + '-STACKSTORM - Health Check Report - ' + str(datetime.date.today())
-    msg_from = 'noreply@nttdata.com'
+    msg_from = 'noreply@clarios.com'
     send_mail_sts = (False, 'NONE')
     msg_body_data = "HealthCheck Report"
     message = MIMEMultipart(msg_body_data)
